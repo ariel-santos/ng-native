@@ -1,0 +1,42 @@
+<ActionBar title="Descubra-se" icon="" class="">
+  <NavigationButton text="Go back" android.systemIcon="ic_menu_back" />
+  <ActionItem
+    ios.systemIcon="16" ios.position="right"
+    text="mais opcoes" android.position="popup">
+  </ActionItem>
+</ActionBar>
+
+<FlexboxLayout
+  flexDirection="column"
+  justifyContent="space-between"
+  backgroundColor="#3c495e"
+>
+  <FlexboxLayout flexDirection="column">
+    <Label padding="16" color="#FFF" margin="4" text="Carta do dia" row="0" col="1" backgroundColor="#43B3F4" (tap)="selectCard()"></Label>
+    <Label padding="16" color="#FFF" margin="4" text="Selecione uma carta" row="1" col="0" backgroundColor="#075B88" ></Label>
+    <Label padding="16" color="#FFF" margin="4" text="Passado, presente e futuro" row="1" col="0" backgroundColor="#075B88" ></Label>
+  </FlexboxLayout>
+
+  <StackLayout>
+    <ng-container *ngIf="cardSelected">
+      <Label class="h1 text-center" color="#FFF" text="Sua carta do dia é"></Label>
+      <Label class="h2 text-center" color="#FFF" [text]="cardSelected.arcanoMaior"></Label>
+      <Label class="text-center" color="#FFF" marginTop="16" fontWeight="bold" text="Pontos positivos"></Label>
+      <Label class="text-center" color="#FFF" [text]="cardSelected.positivo"></Label>
+      <Label class="text-center" color="#FFF" marginTop="16" fontWeight="bold" text="Pontos negativos"></Label>
+      <Label class="text-center" color="#FFF" [text]="cardSelected.negativo"></Label>
+    </ng-container>
+  </StackLayout>
+
+
+  <FlexboxLayout
+    height="50"
+    flexDirection="row"
+    justifyContent="center"
+    backgroundColor="#43B3F4">
+    <Button text="Home" padding="12" margin="0" android.systemIcon="ic_menu_back"></Button>
+    <!-- <Button text="Home" padding="12" margin="0" android.systemIcon="ic_menu_back"></Button>
+    <Button text="Home" padding="12" margin="0" android.systemIcon="ic_menu_back"></Button> -->
+  </FlexboxLayout>
+</FlexboxLayout>
+
