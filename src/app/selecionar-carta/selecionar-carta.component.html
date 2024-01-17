@@ -1,2 +1,41 @@
-<p>selecionar-carta works!</p>
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio sapiente voluptate, rerum quod velit cupiditate provident labore dicta porro nemo. Eaque ex laudantium dolor error quae cumque natus odio ipsum.
+<ActionBar title="Descubra-se" icon="" class="">
+    <NavigationButton (tap)="navegarPara(eRotasNavegacao.HOME)" text="Go back" android.systemIcon="ic_menu_back" />
+    <ActionItem
+      ios.systemIcon="16" ios.position="right"
+      text="mais opcoes" android.position="popup">
+    </ActionItem>
+  </ActionBar>
+
+  <FlexboxLayout
+    flexDirection="column"
+    justifyContent="space-between"
+    backgroundColor="#3c495e"
+  >
+
+    <StackLayout>
+      <ng-container >
+        <Label class="h2 text-center" color="#FFF" text="Carta 1 "></Label>
+        <Label class="h2 text-center" color="#FFF" text="Carta 2 "></Label>
+        <Label class="h2 text-center" color="#FFF" text="Carta 3 "></Label>
+        <Label class="h2 text-center" color="#FFF" text="Carta 4 "></Label>
+        <Label class="h2 text-center" color="#FFF" text="Carta 5 "></Label>
+        <Label class="h2 text-center" color="#FFF" text="Carta 6 "></Label>
+        <Label class="h2 text-center" color="#FFF" text="Carta 7 "></Label>
+        <Label class="h2 text-center" color="#FFF" text="Carta 8 "></Label>
+        <Label class="h2 text-center" color="#FFF" text="Carta 9 "></Label>
+        <Label class="h2 text-center" color="#FFF" text="Carta 10 "></Label>
+      </ng-container>
+    </StackLayout>
+
+
+    <FlexboxLayout
+      height="50"
+      flexDirection="row"
+      justifyContent="center"
+      backgroundColor="#43B3F4">
+      <Button text="Home" padding="12" margin="0" android.systemIcon="ic_menu_back"></Button>
+      <!-- <Button text="Home" padding="12" margin="0" android.systemIcon="ic_menu_back"></Button>
+      <Button text="Home" padding="12" margin="0" android.systemIcon="ic_menu_back"></Button> -->
+    </FlexboxLayout>
+  </FlexboxLayout>
+
