@@ -1,5 +1,5 @@
 <ActionBar title="Descubra-se" icon="" class="">
-  <NavigationButton text="Go back" android.systemIcon="ic_menu_back" />
+  <!-- <NavigationButton text="Go back" android.systemIcon="ic_menu_back" /> -->
   <ActionItem
     ios.systemIcon="16" ios.position="right"
     text="mais opcoes" android.position="popup">
@@ -12,9 +12,9 @@
   backgroundColor="#3c495e"
 >
   <FlexboxLayout flexDirection="column">
-    <Label padding="16" color="#FFF" margin="4" text="Carta do dia" row="0" col="1" backgroundColor="#43B3F4" (tap)="selectCard()"></Label>
-    <Label padding="16" color="#FFF" margin="4" text="Selecione uma carta" row="1" col="0" backgroundColor="#075B88" ></Label>
-    <Label padding="16" color="#FFF" margin="4" text="Passado, presente e futuro" row="1" col="0" backgroundColor="#075B88" ></Label>
+    <Label (tap)="navegarPara(eRotasNavegacao.CARTA_DIA)" padding="16" color="#FFF" margin="4" text="Carta do dia" row="0" col="1" backgroundColor="#43B3F4"></Label>
+    <Label (tap)="navegarPara(eRotasNavegacao.SELECIONAR_CARTA)" padding="16" color="#FFF" margin="4" text="Selecione uma carta" row="1" col="0" backgroundColor="#075B88" ></Label>
+    <Label (tap)="navegarPara(eRotasNavegacao.PASSADO_PRESENTE_FUTURO)" padding="16" color="#FFF" margin="4" text="Passado, presente e futuro" row="1" col="0" backgroundColor="#075B88" ></Label>
   </FlexboxLayout>
 
   <StackLayout>
@@ -34,7 +34,7 @@
     flexDirection="row"
     justifyContent="center"
     backgroundColor="#43B3F4">
-    <Button text="Home" padding="12" margin="0" android.systemIcon="ic_menu_back"></Button>
+    <Button (tap)="navegarPara(eRotasNavegacao.HOME)" text="Home" padding="12" margin="0" android.systemIcon="ic_menu_back"></Button>
     <!-- <Button text="Home" padding="12" margin="0" android.systemIcon="ic_menu_back"></Button>
     <Button text="Home" padding="12" margin="0" android.systemIcon="ic_menu_back"></Button> -->
   </FlexboxLayout>
