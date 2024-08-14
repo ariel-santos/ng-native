@@ -1,0 +1,15 @@
+<FlexboxLayout
+    height="50"
+    flexDirection="row"
+    justifyContent="center"
+    backgroundColor="#43B3F4">
+    <Button (tap)="navegar(eRotasNavegacao.HOME)" text="Home" padding="12" margin="0" android.systemIcon="ic_menu_back"></Button>
+    <!-- <Button text="Home" padding="12" margin="0" android.systemIcon="ic_menu_back"></Button>
+    <Button text="Home" padding="12" margin="0" android.systemIcon="ic_menu_back"></Button> -->
+    <ul>
+        <li (tap)="navegar(eRotasNavegacao.HOME)"> home </li>
+        <li (tap)="navegar(eRotasNavegacao.CARTA_DIA)"> carta do dia </li>
+        <li (tap)="navegar(eRotasNavegacao.PASSADO_PRESENTE_FUTURO)"> passado presente futuro </li>
+        <li (tap)="navegar(eRotasNavegacao.SELECIONAR_CARTA)"> selecionar carta </li>
+    </ul>
+</FlexboxLayout>
