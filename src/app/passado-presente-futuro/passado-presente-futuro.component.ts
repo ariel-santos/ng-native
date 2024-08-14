@@ -5,7 +5,7 @@ import { RouterExtensions } from '@nativescript/angular';
 @Component({
   selector: 'app-passado-presente-futuro',
   templateUrl: './passado-presente-futuro.component.html',
-  styleUrls: ['./passado-presente-futuro.component.scss']
+  styleUrls: ['./passado-presente-futuro.component.css']
 })
 export class PassadoPresenteFuturoComponent extends BaseComponent{
   constructor(

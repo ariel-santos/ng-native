@@ -5,7 +5,7 @@ import { RouterExtensions } from '@nativescript/angular';
 @Component({
   selector: 'app-selecionar-carta',
   templateUrl: './selecionar-carta.component.html',
-  styleUrls: ['./selecionar-carta.component.scss']
+  styleUrls: ['./selecionar-carta.component.css']
 })
 export class SelecionarCartaComponent extends BaseComponent{
   constructor(
