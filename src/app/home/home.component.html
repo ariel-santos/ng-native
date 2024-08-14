@@ -1,4 +1,4 @@
-<ActionBar title="Descubra-se" icon="" class=""></ActionBar>
+<des-header-app></des-header-app>
 
 <FlexboxLayout
   flexDirection="column"
@@ -21,16 +21,7 @@
       <Label class="text-center" color="#FFF" [text]="cardSelected.negativo"></Label>
     </ng-container>
   </StackLayout>
-
-
-  <FlexboxLayout
-    height="50"
-    flexDirection="row"
-    justifyContent="center"
-    backgroundColor="#43B3F4">
-    <Button (tap)="navegarPara(eRotasNavegacao.HOME)" text="Home" padding="12" margin="0" android.systemIcon="ic_menu_back"></Button>
-    <!-- <Button text="Home" padding="12" margin="0" android.systemIcon="ic_menu_back"></Button>
-    <Button text="Home" padding="12" margin="0" android.systemIcon="ic_menu_back"></Button> -->
-  </FlexboxLayout>
 </FlexboxLayout>
+
+<des-menu-footer></des-menu-footer>
 
