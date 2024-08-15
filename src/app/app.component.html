@@ -1,3 +1,5 @@
-<GridLayout>
-  <page-router-outlet></page-router-outlet>
+<GridLayout columns="*" rows="auto, *, auto" actionBarHidden="true">
+  <des-header-app row="0" col="0"></des-header-app>
+  <page-router-outlet  row="1" col="0" actionBarVisibility="never"></page-router-outlet>
+  <des-menu-footer  row="2" col="0"></des-menu-footer>
 </GridLayout>

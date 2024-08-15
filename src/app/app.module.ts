@@ -1,18 +1,22 @@
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core'
-import { NativeScriptModule } from '@nativescript/angular'
+import { NativeScriptCommonModule, NativeScriptModule } from '@nativescript/angular'
 
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
-import { ItemsComponent } from './item/items.component'
-import { ItemDetailComponent } from './item/item-detail.component'
+import { HeaderAppModule } from './_components/header-app/header-app.module'
+import { MenuFooterModule } from './_components/menu-footer/menu-footer.module'
 
 @NgModule({
   bootstrap: [AppComponent],
-  imports: [NativeScriptModule, AppRoutingModule],
+  imports: [
+    NativeScriptCommonModule,
+    NativeScriptModule,
+    AppRoutingModule,
+    HeaderAppModule,
+    MenuFooterModule
+  ],
   declarations: [
-    AppComponent,
-    // ItemsComponent,
-    // ItemDetailComponent,
+    AppComponent
   ],
   providers: [],
   schemas: [NO_ERRORS_SCHEMA],
