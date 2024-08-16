@@ -1,0 +1,14 @@
+@import '../_assets/variaveis.scss';
+
+.des-home{
+    background-color: #FFF;
+
+    &__opcao{
+        background-color: $color-3;
+        padding: 16 8;
+        margin: 8;
+        border-radius: 4;
+        font-size: 12;
+        color: $branco;
+    }
+}

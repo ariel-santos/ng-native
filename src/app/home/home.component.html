@@ -1,16 +1,15 @@
-
 <FlexboxLayout
   flexDirection="column"
   justifyContent="space-between"
-  backgroundColor="#FFFFFF"
+  class="des-home"
 >
   <FlexboxLayout flexDirection="column">
-    <Label (tap)="navegarPara(eRotasNavegacao.CARTA_DIA)" padding="16" color="#FFF" margin="4" text="Carta do dia" row="0" col="1" backgroundColor="#43B3F4"></Label>
-    <Label (tap)="navegarPara(eRotasNavegacao.SELECIONAR_CARTA)" padding="16" color="#FFF" margin="4" text="Selecione uma carta" row="1" col="0" backgroundColor="#075B88" ></Label>
-    <Label (tap)="navegarPara(eRotasNavegacao.PASSADO_PRESENTE_FUTURO)" padding="16" color="#FFF" margin="4" text="Passado, presente e futuro" row="1" col="0" backgroundColor="#075B88" ></Label>
+    <Label (tap)="navegarPara(eRotasNavegacao.CARTA_DIA)" text="Carta do dia" row="0" col="1" class="des-home__opcao"></Label>
+    <Label (tap)="navegarPara(eRotasNavegacao.SELECIONAR_CARTA)" text="Selecione uma carta" row="1" col="0" class="des-home__opcao" ></Label>
+    <Label (tap)="navegarPara(eRotasNavegacao.PASSADO_PRESENTE_FUTURO)" text="Passado, presente e futuro" row="1" col="0" class="des-home__opcao" ></Label>
   </FlexboxLayout>
 
-  <StackLayout>
+  <!-- <StackLayout>
     <ng-container *ngIf="cardSelected">
       <Label class="h1 text-center" color="#FFF" text="Sua carta do dia é"></Label>
       <Label class="h2 text-center" color="#FFF" [text]="cardSelected.arcanoMaior"></Label>
@@ -19,7 +18,5 @@
       <Label class="text-center" color="#FFF" marginTop="16" fontWeight="bold" text="Pontos negativos"></Label>
       <Label class="text-center" color="#FFF" [text]="cardSelected.negativo"></Label>
     </ng-container>
-  </StackLayout>
+  </StackLayout> -->
 </FlexboxLayout>
-
-
