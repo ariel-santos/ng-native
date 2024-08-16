@@ -11,5 +11,8 @@ import { HeaderAppComponent } from './header-app.component';
     CommonModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
+  exports: [
+    HeaderAppComponent
+  ]
 })
 export class HeaderAppModule { }

@@ -1,5 +1,13 @@
-<ActionBar title="Descubra-se" icon="" class=""></ActionBar>
+<GridLayout columns="*" rows="*, *" class="des-header-app">
 
-Boa noite Ariel
+  <GridLayout columns="*, auto" rows="* , *, *" row="1" col="0" class="des-header-app__header">
+    <Label row="0" col="0" class="des-header-app__header__nome-app" [text]="eUtilsEnum.NOME_APP"></Label>
+    <Label row="1" col="0" class="des-header-app__header__cadastro" text="Subtitulo"></Label>
+    
+    <Label row="2" col="0" class="des-header-app__header__subtitulo" text="Faça seu cadastro para ter todos os beneficios"></Label>
+    <!-- <Label row="0" col="1" class="far" text="Boa noite Ariel"></Label> -->
 
-Faça seu cadastro para ter todos os beneficios
+    <Label row="0" col="1" class="des-header-app__header__menu fas" text="&#xf0c9;" (tap)="navegarPara(eRotasNavegacao.MENU_COMPLETO)"></Label>
+  </GridLayout>
+
+</GridLayout>
