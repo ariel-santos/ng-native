@@ -1,21 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterExtensions } from '@nativescript/angular';
 import { RotasNavegacao } from '../../_enums/rota-navegacao.enum';
+import { BaseComponent } from '../base/base.component';
 
 @Component({
   selector: 'des-menu-footer',
   templateUrl: './menu-footer.component.html',
-  styleUrls: ['./menu-footer.component.css']
+  styleUrls: ['./menu-footer.component.scss']
 })
-export class MenuFooterComponent {
-  eRotasNavegacao = RotasNavegacao;
-
+export class MenuFooterComponent extends BaseComponent {
   constructor(
-    private router: RouterExtensions
-  ) {}
-
-  navegar(rota: string) {
-    console.log(rota);
-    this.router.navigate([rota])
+    private routerExtensions: RouterExtensions
+  ) {
+    super(routerExtensions);
   }
 }
