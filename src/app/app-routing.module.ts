@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core'
 import { Routes } from '@angular/router'
 import { NativeScriptRouterModule } from '@nativescript/angular'
-
-import { ItemsComponent } from './item/items.component'
 import { RotasNavegacao } from './_enums/rota-navegacao.enum'
-import { ItemDetailComponent } from './item/item-detail.component'
 
 const routes: Routes = [
   {
     path: RotasNavegacao.HOME,
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path: RotasNavegacao.MENU_COMPLETO,
+    loadChildren: () => import('./menu-completo/menu-completo.module').then(m => m.MenuCompletoModule)
   },
   {
     path: RotasNavegacao.CARTA_DIA,

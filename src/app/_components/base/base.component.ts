@@ -4,8 +4,7 @@ import { RotasNavegacao } from '../../_enums/rota-navegacao.enum';
 
 @Component({
   selector: 'app-base',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  templateUrl: './home.component.html'
 })
 export class BaseComponent {
   eRotasNavegacao = RotasNavegacao;

@@ -1,0 +1,14 @@
+@import '../_assets/variaveis.scss';
+
+.des-menu-completo{
+    &__linha{
+        &__texto{
+            color: $preto;
+            font-size: 18px;
+        }
+        &__icone{
+            color: $preto;
+            font-size: 40px;
+        }
+    }
+}
