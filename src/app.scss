@@ -1,6 +1,6 @@
 @import '@nativescript/theme/css/core.css';
 @import '@nativescript/theme/css/default.css';
-
+@import './app/_assets/variaveis.scss';
 
 // icone docs
 // https://fontawesome.com/v6/search?o=r&m=free
@@ -8,3 +8,27 @@
 .far { font-family: "Font Awesome 6 Free", "fa-regular-400"; font-weight: 400; }
 .fas { font-family: "Font Awesome 6 Free Solid", "fa-solid-900"; font-weight: 900; }
  
+.d-h1{
+    color: $color-1 !important;
+    font-size: 24;
+    font-weight: 900;
+}
+.d-h2{
+    color: $color-2 !important;
+    font-size: 20;
+    font-weight: 600;
+}
+.d-h3{
+    color: $color-3 !important;
+    font-size: 16;
+    font-weight: 600;
+}
+
+.d-texto{
+    color: $preto !important;
+    font-size: 16;
+}
+
+.d-color1{ color: $color-1 !important; }
+.d-color2{ color: $color-2 !important; }
+.d-color3{ color: $color-3 !important; }
