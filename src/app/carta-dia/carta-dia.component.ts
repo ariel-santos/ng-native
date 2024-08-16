@@ -8,7 +8,7 @@ import { BaseComponent } from '../_components/base/base.component';
 @Component({
   selector: 'app-carta-dia',
   templateUrl: './carta-dia.component.html',
-  styleUrls: ['./carta-dia.component.css']
+  styleUrls: ['./carta-dia.component.scss']
 })
 export class CartaDiaComponent extends BaseComponent implements OnInit {
   cardSelected: ListaCardsAcanosMaiores;
