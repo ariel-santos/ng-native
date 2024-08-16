@@ -1,5 +1,5 @@
 {
-  "name": "Descubra-se",
+  "name": "descubra_se",
   "main": "./src/main.ts",
   "version": "1.0.0",
   "private": true,

@@ -7,13 +7,15 @@ import { HeaderAppModule } from './_components/header-app/header-app.module'
 import { MenuFooterModule } from './_components/menu-footer/menu-footer.module'
 
 @NgModule({
-  bootstrap: [AppComponent],
+  bootstrap: [
+    AppComponent
+  ],
   imports: [
     NativeScriptCommonModule,
     NativeScriptModule,
     AppRoutingModule,
     HeaderAppModule,
-    MenuFooterModule
+    MenuFooterModule,
   ],
   declarations: [
     AppComponent

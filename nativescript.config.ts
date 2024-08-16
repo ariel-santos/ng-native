@@ -1,7 +1,7 @@
 import { NativeScriptConfig } from '@nativescript/core';
 
 export default {
-  id: 'org.nativescript.ngnative',
+  id: 'org.nativescript.descubra_se',
   appPath: 'src',
   appResourcesPath: 'App_Resources',
   android: {
