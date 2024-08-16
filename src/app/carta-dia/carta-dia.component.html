@@ -1,16 +1,22 @@
-  <FlexboxLayout
-    flexDirection="column"
-    justifyContent="space-between"
-  >
-    <StackLayout>
-      <ng-container *ngIf="cardSelected">
-        <Label class="h1 text-center" color="#FFF" text="Sua carta do dia é"></Label>
-        <Label class="h2 text-center" color="#FFF" [text]="cardSelected.arcanoMaior"></Label>
-        <Label class="text-center" color="#FFF" marginTop="16" fontWeight="bold" text="Pontos positivos"></Label>
-        <Label class="text-center" color="#FFF" [text]="cardSelected.positivo"></Label>
-        <Label class="text-center" color="#FFF" marginTop="16" fontWeight="bold" text="Pontos negativos"></Label>
-        <Label class="text-center" color="#FFF" [text]="cardSelected.negativo"></Label>
-      </ng-container>
-    </StackLayout>
+<GridLayout columns="*" rows="auto, auto" class="des-carta-dia">
+
+  <GridLayout columns="*" rows="auto, auto" class="des-carta-dia__header" row="0" col="0">
+    <Label class="d-h1 text-center" text="Sua carta do dia é" row="0" col="0" *ngIf="cartaRevelada"></Label>
+    <Label class="d-h1 text-center" text="Toque na carta para descobrir" row="0" col="0" *ngIf="!cartaRevelada"></Label>
+
+    <Label class="d-h2 text-center" [text]="cardSelected.arcanoMaior" row="1" col="0" *ngIf="cartaRevelada"></Label>
+    <Label row="1" col="0" class="des-carta-dia__header__card far" text="&#xf3ce;" (tap)="cartaRevelada = true" *ngIf="!cartaRevelada"></Label>
+  </GridLayout>
+  
+  <FlexboxLayout row="1" col="0" *ngIf="cartaRevelada">
+    <FlexboxLayout flexDirection="column">
+      <Label text="Pontos positivos" class="d-h3 text-center"></Label>
+      <Label class="d-texto text-center" [text]="cardSelected.positivo"></Label>
+    </FlexboxLayout>
+    <FlexboxLayout flexDirection="column">
+      <Label text="Pontos negativos" class="d-h3 text-center"></Label>
+      <Label class="d-texto text-center" [text]="cardSelected.negativo"></Label>
+    </FlexboxLayout>
   </FlexboxLayout>
 
+</GridLayout>

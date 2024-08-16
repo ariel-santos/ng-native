@@ -12,6 +12,7 @@ import { BaseComponent } from '../_components/base/base.component';
 })
 export class CartaDiaComponent extends BaseComponent implements OnInit {
   cardSelected: ListaCardsAcanosMaiores;
+  cartaRevelada = false;
 
   constructor(
     private cardService: CardService,
@@ -21,8 +22,18 @@ export class CartaDiaComponent extends BaseComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (this.cardService.getCartaDia()) {
+      this.cardSelected = this.cardService.getCartaDia();
+      this.cartaRevelada = true;
+    } else {
+      this.getCartas();
+    }
+  }
+
+  getCartas() {
     this.cardService.getCards().subscribe(res => {
-      this.cardSelected = res[Math.floor(Math.random() * res.length)]
+      this.cardSelected = res[Math.floor(Math.random() * res.length)];
+      this.cardService.setCartaDia(this.cardSelected);
     });
   }
 }

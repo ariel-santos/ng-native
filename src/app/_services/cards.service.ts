@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class CardService {
+  cartaDia: ListaCardsAcanosMaiores;
 
   getCards(): Observable<Array<ListaCardsAcanosMaiores>> {
     return new Observable(observer => {
@@ -101,5 +102,11 @@ export class CardService {
         }
       ])
     });
+  }
+  getCartaDia() {
+    return this.cartaDia;
+  }
+  setCartaDia(value: ListaCardsAcanosMaiores) {
+    this.cartaDia = value;
   }
 }

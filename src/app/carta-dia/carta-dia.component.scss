@@ -1,0 +1,16 @@
+
+@import '../_assets/variaveis.scss';
+
+.des-carta-dia{
+    background-color: #FFF;
+    color: $preto;
+    padding: 16 8;
+
+    &__header{
+        &__card{
+            font-size: 200;
+            text-align: center;
+            margin-top: 16;
+        }
+    }
+}
