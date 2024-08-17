@@ -1,15 +1,31 @@
-  <FlexboxLayout
-    flexDirection="column"
-    justifyContent="space-between"
-    backgroundColor="#3c495e"
-  >
+<GridLayout columns="*" rows="auto, *" class="des-passado-presente-futuro" *ngIf="!mostrarResultado">
 
-    <StackLayout>
-      <ng-container >
-        <Label class="h2 text-center" color="#FFF" text="Passado"></Label>
-        <Label class="h2 text-center" color="#FFF" text="Presente"></Label>
-        <Label class="h2 text-center" color="#FFF" text="Futuro"></Label>
-      </ng-container>
-    </StackLayout>
+  <Label text="Selecione 3 cartas para definir seu passado presente e futuro" 
+    class="d-h2 des-passado-presente-futuro__titulo" row="0" col="0" textWrap="true"></Label>
+
+  <ScrollView row="1" col="0">
+    <FlexboxLayout flexWrap="wrap">
+  
+      <FlexboxLayout width="25%" 
+        *ngFor="let carta of cartas" class="des-passado-presente-futuro__card">
+        <Image src="~/assets/front-card.png" *ngIf="carta.revelada"></Image>
+        <Image src="~/assets/back-card.png" *ngIf="!carta.revelada" (tap)="selecionarCarta(carta)"></Image>
+      </FlexboxLayout>
+  
+    </FlexboxLayout>
+  </ScrollView>
+
+</GridLayout >
+
+<ScrollView class="des-passado-presente-futuro__resultado" *ngIf="mostrarResultado">
+  <FlexboxLayout flexDirection="column">
+    <GridLayout *ngFor="let carta of cartasSelecionadas" rows="auto, auto" columns="*"
+      class="des-passado-presente-futuro__resultado__bloco">
+      <GridLayout rows="*" columns="auto, *" class="des-passado-presente-futuro__resultado__bloco__header" row="0" col="0">
+        <Image src="~/assets/front-card.png" row="0" col="0" height="100"></Image>
+        <Label [text]="carta.arcanoMaior" textWrap="true" row="0" col="1"class="d-h3 des-passado-presente-futuro__resultado__bloco__titulo"></Label>
+      </GridLayout>
+      <Label text="{{carta.descricao}}" row="1" col="0" textWrap="true" class="d-texto des-passado-presente-futuro__resultado__bloco__descricao"></Label>
+    </GridLayout>
   </FlexboxLayout>
-
+</ScrollView>

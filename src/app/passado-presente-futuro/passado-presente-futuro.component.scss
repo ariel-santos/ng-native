@@ -1,0 +1,23 @@
+@import '../_assets/variaveis.scss';
+
+.des-passado-presente-futuro{
+    background-color: #FFF;
+    &__titulo{ padding: 12; text-align: center;}
+    &__card{
+        padding: 12;
+    }
+
+    &__resultado{
+        background-color: #FFF;
+        &__bloco{
+            padding: 12;
+
+            &__header{
+                padding: 0 0 12 0;
+            }
+            &__titulo{ 
+                text-align: center; padding-bottom: 8;
+            }
+        }
+    }
+}
