@@ -13,6 +13,10 @@ const routes: Routes = [
     loadChildren: () => import('./menu-completo/menu-completo.module').then(m => m.MenuCompletoModule)
   },
   {
+    path: RotasNavegacao.CLIENTE,
+    loadChildren: () => import('./cliente/cliente.module').then(m => m.ClienteModule)
+  },
+  {
     path: RotasNavegacao.CARTA_DIA,
     loadChildren: () => import('./carta-dia/carta-dia.module').then(m => m.CartaDiaModule)
   },
