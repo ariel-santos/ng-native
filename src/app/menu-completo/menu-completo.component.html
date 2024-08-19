@@ -1,9 +1,10 @@
 <ListView [items]="menuItens" backgroundColor="#FFFFFF" class="des-menu-completo">
   <ng-template let-item="item" let-i="index" class="des-menu-completo__linha">
-    <GridLayout columns="auto, *">
-      <!-- <ContentView width="20" height="20" borderRadius="20" backgroundColor="#65adf1"></ContentView> -->
-      <Label text="&#xf007;" col="0" class="des-menu-completo__linha__icone fas"></Label>
-      <Label [text]="item.nome" col="1" class="des-menu-completo__linha__texto" ></Label>
-    </GridLayout>
+    <ng-container>
+      <GridLayout columns="auto, *" (tap)="navegarPara(item.rota)">
+        <Label text="{{mostraIconeDinamico(item.iconeCode)}}" col="0" class="des-menu-completo__linha__icone {{item.iconeClass}}"></Label>
+        <Label [text]="item.nome" col="1" class="des-menu-completo__linha__texto" ></Label>
+      </GridLayout>
+    </ng-container>
   </ng-template>
 </ListView>

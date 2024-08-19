@@ -15,4 +15,8 @@ export class BaseComponent {
   navegarPara(rota: string): void {
     this.router.navigate([rota])
   }
+
+  mostraIconeDinamico (icone) {
+    return String.fromCharCode(icone);
+  }
 }
