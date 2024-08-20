@@ -1,6 +1,22 @@
-<FlexboxLayout flexDirection="column" class="ds-cliente-conta">
-    <Label text="Nome"></Label>
-    <TextField hint="Placeholder..." editable="false"></TextField>
-    <Label text="Email"></Label>
-    <TextField hint="Placeholder..." editable="false"></TextField>
+<FlexboxLayout flexDirection="column" class="des-cliente-conta">
+    <FlexboxLayout flexDirection="column" class="des-cliente-conta__login">
+        <Label text="Acesse com sua conta" class="d-h1 des-cliente-conta__login__titulo"></Label>
+        <GridLayout columns="auto, *" rows="auto, auto" class="des-cliente-conta__login__form">
+            <Label col="0" row="0" text="Email" class="d-texto"></Label>
+            <TextField col="1" row="0" hint="Digite seu email" editable="true" class="des-cliente-conta__login__form__input"></TextField>
+            <Label col="0" row="1" text="Senha" class="d-texto"></Label>
+            <TextField col="1" row="1" hint="Digite sua senha" editable="true" class="des-cliente-conta__login__form__input"></TextField>
+        </GridLayout>
+        <FlexboxLayout flexDirection="column">
+            <Button text="Confirmar" (tap)="fazerLogin()" class="des-cliente-conta__login__confirmar"></Button>
+        </FlexboxLayout>
+    </FlexboxLayout>
+    <FlexboxLayout flexDirection="column" class="des-cliente-conta__ou">
+        <Label text="Ou" class="d-texto"></Label>
+    </FlexboxLayout>
+    <FlexboxLayout flexDirection="column" >
+        <GoogleSignInButton colorScheme='auto' colorStyle='standard' (tap)="googleSignin()"></GoogleSignInButton>
+    </FlexboxLayout>
 </FlexboxLayout>
+
+

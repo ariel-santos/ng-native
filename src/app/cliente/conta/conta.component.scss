@@ -1,3 +1,28 @@
-.ds-cliente-conta{
+@import '../../_assets/variaveis.scss';
+
+.des-cliente-conta{
     background-color: #FFF;
+    padding: 12;
+    &__login{
+        &__titulo{ 
+            padding-bottom: 24; text-align: center;
+        }
+        &__form{
+            text-align: left;
+            color: $preto;
+            padding-bottom: 12;
+            &__input{ 
+                border: 10 solid $color-1; 
+                color: $preto;
+                background-color: rgb(221, 221, 221);
+            }
+        }
+        &__confirmar{ 
+            background-color: $color-1;
+        }
+    }
+    &__ou{
+        text-align: center;
+        padding: 24 0;
+    }
 }

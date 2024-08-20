@@ -1,19 +1,19 @@
 import {RotasNavegacao} from './rota-navegacao.enum';
 
 const MENU_COMPLETO = [
-  {
-    nome: 'Cadastre-se',
-    rota: RotasNavegacao.CLIENTE_CADASTRO,
-    iconeCode: '0xf683',
-    iconeClass: 'fas',
-    logado: false
-  },
+  // {
+  //   nome: 'Cadastre-se',
+  //   rota: RotasNavegacao.CLIENTE_CADASTRO,
+  //   iconeCode: '0xf683',
+  //   iconeClass: 'fas',
+  //   logado: false
+  // },
   {
     nome: 'Conta',
     rota: RotasNavegacao.CLIENTE_CONTA,
     iconeCode: '0xf683',
     iconeClass: 'fas',
-    logado: true
+    logado: false
   },
   {
     nome: 'Configurações',
@@ -24,7 +24,7 @@ const MENU_COMPLETO = [
   },
   {
     nome: 'Sair',
-    rota: '',
+    rota: RotasNavegacao.CLIENTE_SAIR,
     iconeCode: '0xf08b',
     iconeClass: 'fas',
     logado: true
